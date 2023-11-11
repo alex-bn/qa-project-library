@@ -181,7 +181,7 @@ suite("Functional Tests", function () {
       });
 
       test("Test DELETE /api/books/[id] with id not in db", function (done) {
-        return chai
+        chai
           .request(server)
           .delete(`/api/books/${invalidId}`)
           .end((err, res) => {
